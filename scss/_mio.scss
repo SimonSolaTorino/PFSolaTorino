@@ -1,0 +1,126 @@
+//imports
+@import "mis-variables";
+//GENERALES
+header{
+    background-color: white;
+}
+ul{
+    list-style: none;}
+a{
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 20s all;
+    color: $color_negro_fine;
+    &:hover{
+        background-color: $color_negro_fine;
+        color:whitesmoke !important;
+        border-radius: 10px;
+        }
+}
+.footer_general{
+    font-size: 15px;
+    background-color: white;
+    color: $color_negro_fine;
+}
+//INDEX.HTML
+@if $vista == mobile{
+    @media screen and (max-width:1022px){
+        .footer_general{font-size: $tamaño-textos-footer;}
+    }
+}
+.main_index{
+    background-color: $color_negro_fine
+}
+//PRODUCTOS.HTML
+@mixin info_productos($color,$tamaño_texto,$tipo){
+    font-size: $tamaño_texto;
+    color: $color;
+    font-weight: $tipo;
+}
+@if $vista == mobile{
+    @media screen  and (max-width:1022px){
+        .info_beauty{@include info_productos($color_beauty, 12px, normal);}
+        .titulo_beauty{@include info_productos($color_beauty, 18px, bold)}
+        .info_smooth{@include info_productos($color_smooth, 12px, normal);}
+        .titulo_smooth{@include info_productos($color_smooth, 18px, bold)}
+        .info_peak{@include info_productos($color_peak, 12px, normal);}
+        .titulo_peak{@include info_productos($color_peak, 18px, bold)}
+    }
+}
+@media screen  and (min-width:1022px){
+    .info_beauty{@include info_productos($color_beauty, 20px, normal);}
+    .titulo_beauty{@include info_productos($color_beauty, 50px, bold);}
+    .info_smooth{@include info_productos($color_smooth, 20px, normal);}
+    .titulo_smooth{@include info_productos($color_smooth, 50px, bold);}
+    .info_peak{@include info_productos($color_peak, 20px, normal);}
+    .titulo_peak{@include info_productos($color_peak, 50px, bold);}
+}
+//NOSOTROS.HTML
+@mixin texto_general($color, $tamaño, $tipo, $fondo){
+    color: $color;
+    font-size: $tamaño;
+    font-weight: $tipo;
+    background-color: $fondo;
+}
+@if $vista==mobile{
+    @media screen  and (max-width:1022px){
+        .parrafos_generales{
+            @include texto_general($color_parrafo_general, 13px, normal, white);}
+        .location{
+            height: 100%;
+        }
+    }
+}
+.parrafos_generales{@include texto_general($color_parrafo_general, 25px, bold, white);}
+.location{width:100%}
+//PREGUNTAS.HTML
+.respuestas{
+    @extend .parrafos_generales;
+    color: $color_parrafo_respuestas;
+    font-weight: normal;
+    font-size: 18px;
+}
+.preguntas{
+    @extend .parrafos_generales;
+    font-size: 22px;
+    color: $color_parrafo_respuestas;
+    text-decoration-line: underline;
+}
+.carta{width:70% !important;}
+.formulario,.mas_dudas{
+    padding-top: 25px;
+    width: 100% !important;
+}
+.entry_box,.etiqueta_label{margin-top: 10px; width: 100%;}
+@if $vista == mobile {
+    @media screen and (max-width:1022px){
+        .respuestas{font-size: 10px;}
+        .preguntas{font-size: 14px;}
+        .carta{
+            margin-left: 75px !important;
+            margin-top: 10px !important;
+        }
+    }
+}
+//SHOP.HTML
+.texto_shop, .link_redes{
+    @extend .parrafos_generales;
+    color: $color_parrafo_shop;
+}
+.contenedor_invertir,.contenedor_normal{
+    margin-bottom: 50px;
+}
+@if $vista == mobile{
+    @media screen and (max-width:1022px){
+        .texto_shop,.link_redes{
+            font-size: 12px;
+            text-align: center;
+        }
+        .imagenes_shop{
+            width: 80%;
+        }
+        .contenedor_invertir{
+            flex-direction: row-reverse;
+        }
+    }
+}
