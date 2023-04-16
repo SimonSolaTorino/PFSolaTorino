@@ -1,5 +1,5 @@
-                         _________________________________________________________
-						| SEGUNDA PRE-ENTREGA CODERHOUSE: Simon Jose Sola Torino  |
+                			         _________________________________________________________
+						| TERCER PRE-ENTREGA CODERHOUSE: Simon Jose Sola Torino   |
 						|_________________________________________________________|
 
 A TENER EN CUENTA:
