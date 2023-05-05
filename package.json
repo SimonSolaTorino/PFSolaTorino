@@ -1,7 +1,7 @@
 {
   "name": "preentrega3solatorino",
   "version": "1.0.0",
-  "description": "",
+  "description": "_________________________________________________________\r \t\t\t\t\t\t| TERCER PRE-ENTREGA CODERHOUSE: Simon Jose Sola Torino   |\r \t\t\t\t\t\t|_________________________________________________________|",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

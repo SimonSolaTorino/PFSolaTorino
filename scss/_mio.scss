@@ -17,19 +17,13 @@ a{
         border-radius: 10px;
         }
 }
-.footer_general{
-    font-size: 15px;
-    background-color: white;
-    color: $color_negro_fine;
-}
-//INDEX.HTML
 @if $vista == mobile{
     @media screen and (max-width:1022px){
-        .footer_general{font-size: $tamaño-textos-footer;}
+        .texto_footer{font-size: 15px;}
+        .logo_insta{width: 20%;
+        height: auto;
     }
-}
-.main_index{
-    background-color: $color_negro_fine
+    }
 }
 //PRODUCTOS.HTML
 @mixin info_productos($color,$tamaño_texto,$tipo){

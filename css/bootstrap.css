@@ -10739,15 +10739,13 @@ a:hover {
   border-radius: 10px;
 }
 
-.footer_general {
-  font-size: 15px;
-  background-color: white;
-  color: #161920;
-}
-
 @media screen and (max-width: 1022px) {
-  .footer_general {
-    font-size: 5px;
+  .texto_footer {
+    font-size: 15px;
+  }
+  .logo_insta {
+    width: 20%;
+    height: auto;
   }
 }
 .main_index {
@@ -10897,132 +10895,6 @@ a:hover {
   .contenedor_invertir {
     flex-direction: row-reverse;
   }
-}/*# sourceMappingURL=style.css.map */
+}
 
-/*mi css: GENERAL*/
-.footer_general{
-  display: grid;
-  grid-template-areas: "gif bloque";
-  grid-template-columns: 20% 80%;
-  grid-template-rows: auto auto;
-  background-color: black;
-}
-.contenedor_footer{grid-area: bloque;}
-.logo_footer{
-  grid-area: gif;
-  width: 70%;
-  height: auto;
-  padding-left: 2%;
-  place-self: center;
-}
-.texto_footer{
-  color: white;
-  font-size: small;
-  padding-left: 1%;
-  padding-top: 2%;
-}
-@media screen and (max-width:1022px){
-  .texto_footer{font-size: xx-small;}
-  .logo_insta{width: 10%;
-  height: auto;}
-}
-.saca_padding_margin{/*para sacar margenes y padding que me daban overflow*/
-  margin: 0 !important;
-  padding: 0 !important;
-}
-/*mi css: INDEX desktop*/
-.main_index{
-  display: grid;
-  grid-template-areas: 
-  "TITULO"
-  "DESCRIPCION"
-  "IMAGEN";
-  grid-template-columns: auto;
-  grid-template-rows: 1/3 1/3 1/3;
-}
-@media screen and (min-width:1023px){
-  .imagen_index_mobile{
-    display: none;
-  }
-}
-.titulo_index{grid-area: TITULO;
-  color: #dfe2e7;
-}
-.descripcion_index{grid-area: DESCRIPCION;
-  color: #585e6f;
-  font-weight: bold;
-}
-.imagen_index{
-  width: 100%;
-  height: auto;
-  grid-area: IMAGEN;
-}
-.titulo_index, .descripcion_index{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-/*mi css: INDEX mobile*/
-@media screen and (max-width:1022px){
-  .imagen_index{display: none;}
-  .main_index{
-    display: grid;
-    grid-template-areas: 
-    "TITULO"
-    "DESCRIPCION"
-    "IMAGEN";
-    grid-template-columns: auto;
-    grid-template-rows: 1/3 1/3 1/3;
-  }
-  .titulo_index{padding-top: 10%;
-  grid-area: TITULO;}
-  .descripcion_index{padding-bottom: 10%;
-  grid-area: DESCRIPCION;}
-  .imagen_index_mobile{
-    grid-area: IMAGEN;
-    height: auto;
-    width: 100%;}
-}
-/*mi css: PREGUNTAS: mobile*/
-@media screen and (max-width:1022px){
-  .form_mobile{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-  }
-  .carta_overflow{
-    overflow-x: hidden !important;
-  }
-}
-/*mi css: SHOP: desktop*/
-@media screen and (min-width:1023px){
-  .saca_overflow_shop{
-    overflow-x: hidden !important;
-  }
-}
-/*mi css: SHOP: mobile*/
-@media screen and (max-width:1022px){
-  .grid_shop{
-    display: grid;
-    grid-template-areas: 
-    "contenedor_1"
-    "contenedor_2";
-    grid-template-columns: auto;
-    grid-template-rows: 1/2 1/2;
-    
-  }
-  .contenedor_normal{grid-area: contenedor_1;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .contenedor_invertir{grid-area: contenedor_2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-}
+/*# sourceMappingURL=bootstrap.css.map */
